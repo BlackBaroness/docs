@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/docs/',
   title: "BlackBaroness docs",
   description: "Документация от BlackBaroness",
   themeConfig: {
