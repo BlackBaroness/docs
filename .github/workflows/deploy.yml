@@ -1,13 +1,18 @@
 name: Deploy to GitHub Pages
 
 on:
-  workflow_dispatch:
-    branches: [main]
   push:
-    branches: [main]
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -33,11 +38,11 @@ jobs:
       - name: Build site
         run: pnpm docs:build
 
-      - name: Add .nojekyll
-        run: touch .vitepress/dist/.nojekyll
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.vitepress/dist'
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .vitepress/dist
+        id: deployment
+        uses: actions/deploy-pages@v4
