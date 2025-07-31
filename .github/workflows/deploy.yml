@@ -20,14 +20,15 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 'lts/*'
-          cache: 'pnpm'
+          node-version: 'latest'
           check-latest: true
 
       - name: Install dependencies
         run: |
+          npm install --global corepack@latest
           corepack enable
-          pnpm install
+          corepack enable pnpm
+          corepack use pnpm@latest-10
 
       - name: Build site
         run: pnpm docs:build
@@ -36,4 +37,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .vitepress/dist
+          publish_dir: docs/.vitepress/dist
