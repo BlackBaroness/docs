@@ -21,6 +21,12 @@ export default defineConfig({
               items: [
                 { text: 'general.yml', link: '/pages/baronessauth/default_configuration/general' },
               ]
+            },
+            {
+              text: 'Гайды',
+              items: [
+                { text: 'Встроенные сервера', link: '/pages/baronessauth/guide/embedded-servers' },
+              ]
             }
           ]
       }
