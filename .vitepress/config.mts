@@ -27,6 +27,7 @@ export default defineConfig({
               items: [
                 { text: 'Встроенные сервера', link: '/pages/baronessauth/guide/embedded-servers' },
                 { text: 'Бот VK', link: '/pages/baronessauth/guide/vk' },
+                { text: 'Бот Telegram', link: '/pages/baronessauth/guide/telegram' },
               ]
             }
           ]
