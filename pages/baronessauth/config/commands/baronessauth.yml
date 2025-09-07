@@ -1,0 +1,202 @@
+# ┌────────────────────────────────
+# │ Команда /baronessauth (/auth).
+# │ Право: BaronessAuth.command.baronessauth.
+# │ Предназначена для админов.
+# │
+# │ Так как команд очень много, детальную настройку каждой субкоманды я убрал - чтобы конфиг не был на тысячу строк.
+# └────────────────────────────────
+
+help-header: '<gradient:#FFE082:#FFB74D>┏━━━━━ Доступные команды (кликабельны) ━━━━━┓</gradient>'
+help-footer: '<gradient:#FFE082:#FFB74D>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</gradient>'
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth reload.
+# │ Право: BaronessAuth.command.baronessauth.reload.
+# │ Перезагружает большую часть плагина (подхватывает новые настройки).
+# └────────────────────────────────
+reload:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    reload''>/auth reload</click></hover>'
+  success: |-
+    <green>Плагин успешно перезагружен.
+    <yellow>Помните, что некоторые глобальные настройки (например, база данных) можно сменить только через полную перезагрузку!
+    <yellow>Как правило, над такими настройками в комментарии написано об этом.
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth player [игрок] info.
+# │ Право: BaronessAuth.command.baronessauth.player.info
+# │ Выводит данные об игроке.
+# └────────────────────────────────
+player-info:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    player''>/auth player <gray><игрок></gray> info</click></hover>'
+  output: |-
+    <gradient:#FFE082:#FFB74D>┏━━━━━━━━━━ Информация об игроке ━━━━━━━━━━┓</gradient>
+    <gradient:#FFE082:#FFB74D>⮞</gradient> <yellow>Ник:</yellow> <white><name>
+    <gradient:#FFE082:#FFB74D>⮞</gradient> <yellow>UUID:</yellow> <white><uuid>
+    <gradient:#FFE082:#FFB74D>⮞</gradient> <yellow>Премиум:</yellow> <white><premium>
+    <gradient:#FFE082:#FFB74D>⮞</gradient> <yellow>VK:</yellow> <white><vk>
+    <gradient:#FFE082:#FFB74D>⮞</gradient> <yellow>Telegram:</yellow> <white><telegram>
+    <gradient:#FFE082:#FFB74D>⮞</gradient> <yellow>Discord:</yellow> <white><discord>
+    <gradient:#FFE082:#FFB74D>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</gradient>
+  premium-yes: '<green>да'
+  premium-no: '<red>нет'
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth player [игрок] set password [пароль].
+# │ Право: BaronessAuth.command.baronessauth.player.set.password
+# │ Устанавливает игроку пароль, обходя все ограничения паролей по сложности.
+# └────────────────────────────────
+player-set-password:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    player''>/auth player <gray><игрок></gray> set password <gray><пароль></gray></click></hover>'
+  success: '<green>Вы успешно сменили пароль игроку <target>.'
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth player [игрок] set telegram [id].
+# │ Право: BaronessAuth.command.baronessauth.player.set.telegram
+# │ Устанавливает игроку Telegram ID (привязывает).
+# │ Если вместо ID написать null, произойдёт отвязка.
+# └────────────────────────────────
+player-set-telegram:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    player''>/auth player <gray><игрок></gray> set telegram <gray><id или null></gray></click></hover>'
+  success: '<green>Вы успешно установили Telegram ID <id> игроку <target>.'
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth player [игрок] set vk [id].
+# │ Право: BaronessAuth.command.baronessauth.player.set.vk
+# │ Устанавливает игроку VK ID (привязывает).
+# │ Если вместо ID написать null, произойдёт отвязка.
+# └────────────────────────────────
+player-set-vk:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    player''>/auth player <gray><игрок></gray> set vk <gray><id или null></gray></click></hover>'
+  success: '<green>Вы успешно установили VK ID <id> игроку <target>.'
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth player [игрок] set discord [id].
+# │ Право: BaronessAuth.command.baronessauth.player.set.discord
+# │ Устанавливает игроку Discord ID (привязывает).
+# │ Если вместо ID написать null, произойдёт отвязка.
+# └────────────────────────────────
+player-set-discord:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    player''>/auth player <gray><игрок></gray> set discord <gray><id или null></gray></click></hover>'
+  success: '<green>Вы успешно установили Discord ID <id> игроку <target>.'
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth player [игрок] set premium [true/false].
+# │ Право: BaronessAuth.command.baronessauth.player.set.premium
+# │ Переключает игроку режим лицензии.
+# └────────────────────────────────
+player-set-premium:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    player''>/auth player <gray><игрок></gray> set premium <gray><true/false></gray></click></hover>'
+  success: '<green>Вы успешно переключили режим лицензии на <value> игроку <target>.'
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth player [игрок] logout.
+# │ Право: BaronessAuth.command.baronessauth.player.logout
+# │ Сбрасывает сессию игроку.
+# └────────────────────────────────
+player-logout:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    player''>/auth player <gray><игрок></gray> logout</click></hover>'
+  kick-reason: '<green>Ваша сессия сброшена.'
+  success: '<green>Вы успешно сбросили сессию игрока <target>.'
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth player [игрок] delete.
+# │ Право: BaronessAuth.command.baronessauth.player.delete
+# │ Удаляет все данные о регистрации игрока.
+# └────────────────────────────────
+player-delete:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    player''>/auth player <gray><игрок></gray> delete</click></hover>'
+  kick-reason: '<yellow>Ваша регистрация была удалена, поэтому вам нужно перезайти'
+  success: '<green>Вы успешно удалили регистрацию игрока <target>.'
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth find player by ip [ip].
+# │ Право: BaronessAuth.command.baronessauth.find.player.by.ip
+# │ Ищет игроков по IP.
+# └────────────────────────────────
+find-player-by-ip:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    find player by ip''>/auth find player by ip <gray><адрес></gray></click></hover>'
+  output-header: '<gradient:#FFE082:#FFB74D>┏━━━━━━━━━━ Игроки с IP <address></gradient>'
+  output-entry: '<gradient:#FFE082:#FFB74D>⮞</gradient> <u><yellow><click:run_command:''/auth
+    player <name> info''><hover:show_text:''Нажмите, чтобы посмотреть информацию об
+    игроке''><name></hover></click></yellow></u> от <white><gray><first_date></gray>
+    до <gray><last_date></gray> (<gray><logins></gray> входов)'
+  output-footer: '<gradient:#FFE082:#FFB74D>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</gradient>'
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth backup info [бекап-файл].
+# │ Право: BaronessAuth.command.baronessauth.backup.info
+# │ Отображает информацию о бекапе.
+# └────────────────────────────────
+backup-info:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    backup info''>/auth backup info <gray><файл></gray></click></hover>'
+  output: |-
+    <yellow><b>││││</b></yellow> Данные о бекапе '<name>'
+    <yellow><b>││</b></yellow> Формат: <white><format></white>
+    <yellow><b>││</b></yellow> Дата создания: <white><creation_date></white>
+    <yellow><b>││</b></yellow> Комментарий: <white><comment></white>
+    <yellow><b>││</b></yellow> Вес: <white><file_size></white> <gray>(<file_size_bytes>)</gray>
+    <yellow><b>││</b></yellow> Профилей внутри: <white><profiles></white>
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth backup create.
+# │ Право: BaronessAuth.command.baronessauth.backup.create
+# │ Создает бекап. Действие не мгновенное - вам будет показан прогресс по мере создания.
+# └────────────────────────────────
+backup-create:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    backup create''>/auth backup create</click></hover>'
+  progress: |-
+    <yellow><b>│││││</b></yellow> Бекап создаётся (<percent>%, ETA <eta> s)
+    <yellow><b>│││</b></yellow> Профилей сохранено: <white><saved></white>
+    <yellow><b>│││</b></yellow> Профилей всего: <white><total></white>
+  success: |-
+    <green>✔ Бекап создан: <white><file></white> (<file_size>)</green>
+    <green>Профилей сохранено: <white><saved></white></green>
+    <green>Профилей всего: <white><total></white></green>
+    <green>Создание завершилось за <white><time_spent></white>.</green>
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth backup load (--force).
+# │ Право: BaronessAuth.command.baronessauth.backup.create
+# │ Загружает бекап. Действие не мгновенное - вам будет показан прогресс по мере создания.
+# │ Если указать --force, конфликты будут перезаписаны (данные в бекапе будут приоритетнее данных в БД).
+# └────────────────────────────────
+backup-load:
+  help: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    backup load''>/auth backup load <gray><файл></gray></click></hover>'
+  progress: |-
+    <yellow><b>││││</b></yellow> Бекап загружается (<percent>%, ETA <eta> s)
+    <yellow><b>││</b></yellow> Профилей сохранено: <white><saved></white>
+    <yellow><b>││</b></yellow> Профилей пропущено: <white><skipped></white>
+    <yellow><b>││</b></yellow> Профилей всего: <white><total></white>
+  success: |-
+    <green>✔ Бекап <white><name></white> загружен.</green>
+    <green>Профилей сохранено: <white><saved></white></green>
+    <green>Профилей пропущено: <white><skipped></white></green>
+    <green>Профилей всего: <white><total></white></green>
+    <green>Загрузка завершилась за <white><time_spent></white>.</green>
+
+# ┌────────────────────────────────
+# │ Группа команд /baronessauth dev.
+# │ Право ко всем ним: BaronessAuth.command.baronessauth.dev
+# │
+# │ Эти команды могут быть ОПАСНЫ и должны использоваться только ПО ПРЯМЫМ УКАЗАНИЯМ РАЗРАБОТЧИКА!
+# │ Ни в коем случае не включайте, если https://t.me/blackbaroness100 не сказал вам сделать это!
+# └────────────────────────────────
+unsafe-developer-commands:
+  enabled: false
+  help-createrandomassprofiles: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    dev createrandomassprofiles''>/auth dev createrandomassprofiles <gray><количество></gray></click></hover>'
+  help-embeddedserversinfo: '<gradient:#FFE082:#FFB74D>⮞</gradient> <hover:show_text:''Кликабельно!''><white><click:suggest_command:''/auth
+    dev embeddedserversinfo''>/auth dev embeddedserversinfo</click></hover>'

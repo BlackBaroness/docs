@@ -1,0 +1,69 @@
+# ┌────────────────────────────────
+# │ Общие настройки команд.
+# └────────────────────────────────
+
+
+# Сообщения, использующиеся во многих командах.
+# Если вы ищете что-то конкретное, оно всегда там, где настраивается соответствующая функция.
+messages:
+  player-only: '<red>Эта команда может быть выполнена только игроком.'
+  permission: '<red>Недостаточно прав (<permission>).'
+  cooldown: '<red>Подождите <duration>, прежде чем использовать эту команду.'
+  unknown-dump-file: '<red>Дамп-файла ''<input>'' не существует.'
+  invalid-dump-file: '<red>Дамп-файл ''<input>'' некорректный.'
+  unknown-link-service: '<red>Неизвестный сервис ''<input>''. Введите <gray>/link</gray>,
+    чтобы посмотреть доступные.'
+  unknown-migration-source: '<red>Источника миграции ''<input>'' не существует. Доступны:
+    <gray><variants></gray>.'
+  target-player-must-be-offline: '<red>Указанный игрок, <target>, должен быть оффлайн.'
+  target-player-is-not-registered: '<red>Указанный игрок, <target>, не зарегистрирован.'
+  process-may-take-a-while: '<gray>Этот процесс может занять некоторое время....'
+  invalid-ip-address: '<red>Некорректный IP-адрес: <input>'
+  already-linked: '<red>Вы уже привязаны к сервису <service>!'
+  invalid-number: '<red>''<input>'' это не число.'
+  invalid-usage-header: '<red>[<cause>: <input>]</red> <gray>Использование:</gray>'
+  invalid-usage-entry: '<gray><schematic>'
+  invalid-usage-causes:
+    'INVALID_ARGUMENT': 'Неправильный аргумент'
+    'MISSING_ARGUMENT': 'Аргумент отсутствует'
+    'UNKNOWN_COMMAND': 'Неизвестная команда'
+    'MISSING_PART_OF_ARGUMENT': 'Отсутствует часть аргумента'
+    'TOO_MANY_ARGUMENTS': 'Слишком много аргументов'
+
+# Тайтл-анимация, отображающаяся во время проверки пароля (/reg, /l, /changepassword и так далее).
+checking-password-title-animation:
+  animation-speed: '140 мсек'
+  parts:
+  - title: '<gradient:#ff8d0a:#e5ff00:-1.0>Проверка пароля...</gradient>'
+    subtitle: '<gray>Подождите немного...'
+  - title: '<gradient:#ff8d0a:#e5ff00:-0.8>Проверка пароля...</gradient>'
+    subtitle: '<gray>Подождите немного...'
+  - title: '<gradient:#ff8d0a:#e5ff00:-0.6>Проверка пароля...</gradient>'
+    subtitle: '<gray>Подождите немного...'
+  - title: '<gradient:#ff8d0a:#e5ff00:-0.4>Проверка пароля...</gradient>'
+    subtitle: '<gray>Подождите немного...'
+  - title: '<gradient:#ff8d0a:#e5ff00:-0.2>Проверка пароля...</gradient>'
+    subtitle: '<gray>Подождите немного...'
+  - title: '<gradient:#ff8d0a:#e5ff00:0.0>Проверка пароля...</gradient>'
+    subtitle: '<gray>Подождите немного...'
+  - title: '<gradient:#ff8d0a:#e5ff00:0.2>Проверка пароля...</gradient>'
+    subtitle: '<gray>Подождите немного...'
+  - title: '<gradient:#ff8d0a:#e5ff00:0.4>Проверка пароля...</gradient>'
+    subtitle: '<gray>Подождите немного...'
+  - title: '<gradient:#ff8d0a:#e5ff00:0.6>Проверка пароля...</gradient>'
+    subtitle: '<gray>Подождите немного...'
+  - title: '<gradient:#ff8d0a:#e5ff00:0.8>Проверка пароля...</gradient>'
+    subtitle: '<gray>Подождите немного...'
+  - title: '<gradient:#ff8d0a:#e5ff00:1.0>Проверка пароля...</gradient>'
+    subtitle: '<gray>Подождите немного...'
+
+# "Ярлыки" для любых команд (даже из других плагинов).
+# Здесь вы можете создать команду, которая будет вызывать другую команду.
+# Например, "survival": "server survival" создаст команду /survival для перехода на сервер.
+# Аргументы команды перенаправляются в исходном виде.
+shortcuts:
+  'vk': 'link vk'
+  'vkontakte': 'link vk'
+  'tg': 'link telegram'
+  'telegram': 'link telegram'
+  'discord': 'link discord'

@@ -3,23 +3,54 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/docs/',
-  title: "BlackBaroness docs",
+  titleTemplate: ':title - Baroness Docs',
   description: "Документация от BlackBaroness",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'BaronessAuth', link: '/pages/baronessauth/changelog' }
+      { text: 'BaronessAuth', link: '/pages/baronessauth/changelog/index' }
     ],
 
     sidebar: [
       {
         text: '',
           items: [
-            { text: 'История версий', link: '/pages/baronessauth/changelog' },
+            { text: 'История версий', link: '/pages/baronessauth/changelog/index' },
             {
-              text: 'Стандартные конфиги',
+              text: 'Конфиги',
               items: [
-                { text: 'general.yml', link: '/pages/baronessauth/default_configuration/general' },
+                { text: 'general.yml', link: '/pages/baronessauth/config/general' },
+                { text: 'advanced.yml', link: '/pages/baronessauth/config/advanced' },
+                {
+                  text: 'methods/',
+                  items: [
+                    { text: 'password.yml', link: '/pages/baronessauth/config/methods/password' },
+                    { text: 'vk.yml', link: '/pages/baronessauth/default_configuration/methods/vk' },
+                    { text: 'telegram.yml', link: '/pages/baronessauth/config/methods/telegram' },
+                    { text: 'discord.yml', link: '/pages/baronessauth/config/methods/discord' },
+                    { text: 'session.yml', link: '/pages/baronessauth/config/methods/session' },
+                    { text: 'premium.yml', link: '/pages/baronessauth/config/methods/premium' },
+                  ]
+                },
+                {
+                  text: 'security/',
+                  items: [
+                    { text: 'passwords.yml', link: '/pages/baronessauth/config/security/passwords' },
+                    { text: 'multi_accounts.yml', link: '/pages/baronessauth/config/security/multi_accounts' },
+                    { text: 'connection_filters.yml', link: '/pages/baronessauth/config/security/connection_filters' },
+                  ]
+                },
+                {
+                  text: 'commands/',
+                  items: [
+                    { text: '_shared.yml', link: '/pages/baronessauth/config/commands/_shared' },
+                    { text: 'baronessauth.yml', link: '/pages/baronessauth/config/commands/baronessauth' },
+                    { text: 'changepassword.yml', link: '/pages/baronessauth/config/commands/changepassword' },
+                    { text: 'link.yml', link: '/pages/baronessauth/config/commands/link' },
+                    { text: 'logout.yml', link: '/pages/baronessauth/config/commands/logout' },
+                    { text: 'unregister.yml', link: '/pages/baronessauth/config/commands/unregister' },
+                  ]
+                },
               ]
             },
             {
