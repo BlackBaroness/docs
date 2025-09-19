@@ -28,6 +28,10 @@
 
 Ниже есть подробное описание каждого типа.
 
+::: info
+Всё это настраивается в файле `BaronessAuth/config/general.yml`, секция `embedded-servers`, там секция вашего сервера (скорее всего, `auth`).
+:::
+
 ## Типы серверов / `nanolimbo`
 
 Основанный на [NanoLimbo](https://github.com/BoomEaro/NanoLimbo/tree/feature/1.21.2), этот сервер самый лёгкий и быстрый.
@@ -162,6 +166,36 @@ BaronessAuth.
 7. Введите в секцию `schematic` название своего файла, например, `my-schematic.schem`.
 
 Вот и всё - после рестарта прокси вы должны увидеть свою схематику!
+
+## Forwarding
+
+Настройка Forwarding определяет то, как прокси и сервер общаются друг с другом.
+
+Как правило, стандартной настройки, `none`, достаточно, но давайте рассмотрим, как можно это настраивать.
+
+1. Без forwarding:
+
+```yml
+      forwarding: !<none> {}
+```
+
+2. Legacy / BungeeCord:
+```yml
+      forwarding: !<legacy> {}
+```
+
+3. BungeeGuard:
+```yml
+      forwarding: !<bungee-guard>
+        tokens:
+          - 'токен BungeeGuard'
+```
+
+4. Modern / Velocity:
+```yml
+      forwarding: !<velocity-modern>
+        secret: 'секрет Velocity Modern'
+```
 
 ## Java / поставщик
 
