@@ -25,7 +25,7 @@ export default defineConfig({
                   text: 'methods/',
                   items: [
                     { text: 'password.yml', link: '/pages/baronessauth/config/methods/password' },
-                    { text: 'vk.yml', link: '/pages/baronessauth/default_configuration/methods/vk' },
+                    { text: 'vk.yml', link: '/pages/baronessauth/config/methods/vk' },
                     { text: 'telegram.yml', link: '/pages/baronessauth/config/methods/telegram' },
                     { text: 'discord.yml', link: '/pages/baronessauth/config/methods/discord' },
                     { text: 'session.yml', link: '/pages/baronessauth/config/methods/session' },
