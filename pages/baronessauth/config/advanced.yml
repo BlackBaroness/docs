@@ -25,6 +25,10 @@ default-player-parameters:
 # └────────────────────────────────
 database:
   connection-args: []
+  cache:
+    enabled: true
+    size: 10000
+    expire-after: '30 мин'
 
 # Устанавливать ли игрокам UUID из БД. Не трогайте без причины!
 force-set-player-uuid: false
@@ -65,7 +69,7 @@ unsupported-socket-address-type: '<red>Система аутентификаци
 # Позволяет изменить формат дат, отображаемых в разных местах.
 # Как правило, это не стоит менять - тут нужно понимать специфику этих значений.
 date-format:
-  pattern: 'd MMM uuuu, HH:mm'
+  pattern: 'dd-MM-yyyy HH:mm'
   locale: 'ru-RU'
   zone: 'Europe/Moscow'
 

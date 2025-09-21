@@ -9,8 +9,8 @@ messages:
   player-only: '<red>Эта команда может быть выполнена только игроком.'
   permission: '<red>Недостаточно прав (<permission>).'
   cooldown: '<red>Подождите <duration>, прежде чем использовать эту команду.'
-  unknown-dump-file: '<red>Дамп-файла ''<input>'' не существует.'
-  invalid-dump-file: '<red>Дамп-файл ''<input>'' некорректный.'
+  unknown-backup-file: '<red>Бекап-файла ''<input>'' не существует.'
+  invalid-backup-file: '<red>Бекап-файл ''<input>'' некорректный.'
   unknown-link-service: '<red>Неизвестный сервис ''<input>''. Введите <gray>/link</gray>,
     чтобы посмотреть доступные.'
   unknown-migration-source: '<red>Источника миграции ''<input>'' не существует. Доступны:
@@ -21,6 +21,9 @@ messages:
   invalid-ip-address: '<red>Некорректный IP-адрес: <input>'
   already-linked: '<red>Вы уже привязаны к сервису <service>!'
   invalid-number: '<red>''<input>'' это не число.'
+  temporary-code-rate-limit: '<red>Подождите, прежде чем запрашивать новый временный
+    код!'
+  slow-operation: '<yellow>Это может занять некоторое время...'
   invalid-usage-header: '<red>[<cause>: <input>]</red> <gray>Использование:</gray>'
   invalid-usage-entry: '<gray><schematic>'
   invalid-usage-causes:
@@ -67,3 +70,8 @@ shortcuts:
   'tg': 'link telegram'
   'telegram': 'link telegram'
   'discord': 'link discord'
+
+progress-bar:
+  segment-count: 36
+  segment-filled: '<color:#00ff0d>■'
+  segment-empty: '<color:#a6a6a6>□'

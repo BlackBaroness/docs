@@ -80,7 +80,7 @@ disabling:
     <color:#ff8d0a>╠</color> 2. У вас снова появятся пароли, 2FA и прочие проверки
     <color:#ff8d0a>╠</color> 3. Вы сможете вернуться к лицензии, введя <u><color:#ff8d0a>/premium</color></u>
     <color:#ff8d0a>╠</color>
-    <color:#ff8d0a>╠</color>  Нажмите <color:#ff8d0a><click:run_command:<callback>'>СЮДА</click></color>, чтобы продолжить.
+    <color:#ff8d0a>╠</color>  Нажмите <color:#ff8d0a><click:run_command:'<callback>'>СЮДА</click></color>, чтобы продолжить.
     <color:#ff8d0a>╚</color>
   success: |-
     <color:#ff8d0a>╔</color>

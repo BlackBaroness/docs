@@ -90,6 +90,9 @@ servers:
       # Включить/выключить погоду.
       # Если погода выключена, всегда будет ясное небо.
       weather: true
+      # Настройки Forwarding - обычно нужно менять только при использовании Velocity Forwarding
+      # https://blackbaroness.github.io/docs/pages/baronessauth/guide/embedded-servers.html#forwarding
+      forwarding: !<none> {}
       # Настройки Java (вам не стоит тут ничего менять)
       java:
         xmx: '1 GiB'
@@ -105,7 +108,11 @@ servers:
   require-link:
     list:
     - 'super-duper-secure-server'
-    message: '<red>Вы должны иметь привязку, чтобы войти на этот сервер - /link.'
+    message: |-
+      <red>Вы должны иметь привязку, чтобы войти на этот сервер.
+
+      Используйте /link, чтобы привязаться.
+      Или /premium, если у вас есть лицензия Minecraft.
     bypass-permission:
       enabled: false
       value: 'BaronessAuth.bypass.require_link'
