@@ -9,7 +9,7 @@
 - Встроенная Java (21 -> 25).
 - Встроенный сервер `paper (latest)`.
 - Встроенный сервер `nanolimbo`.
-- Плагины ViaVersion, ViaBackwards для встроенных серверов типа `paper`
+- Плагины ViaVersion, ViaBackwards для встроенных серверов типа `paper`.
 
 ## 3.4.1 (29.9.2025)
 
