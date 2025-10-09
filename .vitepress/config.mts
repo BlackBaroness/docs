@@ -1,4 +1,5 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
+import lightbox from "vitepress-plugin-lightbox"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -59,6 +60,7 @@ export default defineConfig({
                 { text: 'Встроенные сервера', link: '/pages/baronessauth/guide/embedded-servers' },
                 { text: 'Бот VK', link: '/pages/baronessauth/guide/vk' },
                 { text: 'Бот Telegram', link: '/pages/baronessauth/guide/telegram' },
+                { text: 'Бот Discord', link: '/pages/baronessauth/guide/discord' },
               ]
             }
           ]
@@ -95,5 +97,11 @@ export default defineConfig({
         },
       },
     },
-  }
-})
+  },
+  markdown: {
+    config: (md) => {
+      // Use lightbox plugin
+      md.use(lightbox, {});
+    },
+  },
+});

@@ -167,3 +167,8 @@ general-logs:
     print-to-file: true
     print-to-console: true
     compression-threshold: '50 MiB'
+
+# Разрешать ли сторонним плагинам пользоваться BaronessAuth API?
+# Если у вас нет плагинов, которым это нужно, безопаснее будет не включать.
+# Для изменения этого параметра требуется полная перезагрузка.
+api-enabled: false
