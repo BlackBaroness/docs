@@ -195,7 +195,7 @@ bot:
       label: '📞 Помощь'
       message: 'Нажмите, чтобы обратиться за помощью:'
       url-button: '📞 Обратиться за помощью'
-      url: 'https://t.me/blackbaroness100'
+      url: 'https://blackbaroness.github.io/docs/pages/baronessauth/default_help_link'
     toggle2fa:
       label: '🔗 Переключить 2FA'
       success: '🔗 Вы переключили 2FA для <name>, теперь она <status>.'
