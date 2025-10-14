@@ -267,6 +267,9 @@ unsafe-developer-commands:
   help-embedded-servers-info: '<gradient:#FFE082:#FFB74D>┣</gradient> <hover:show_text:''Кликабельно:
     /auth dev embedded-servers-info''><click:suggest_command:''/auth dev embedded-servers-info''><color:#FEFEFE>/auth
     dev embedded-servers-info</color></click></hover>'
+  help-internal-event-subscribers-info: '<gradient:#FFE082:#FFB74D>┣</gradient> <hover:show_text:''Кликабельно:
+    /auth dev internal-event-subscribers-info''><click:suggest_command:''/auth dev
+    internal-event-subscribers-info''><color:#FEFEFE>/auth dev internal-event-subscribers-info</color></click></hover>'
   help-create-random-ass-profiles: '<gradient:#FFE082:#FFB74D>┣</gradient> <hover:show_text:''Кликабельно:
     /auth dev create-random-ass-profiles <количество>''><click:suggest_command:''/auth
     dev create-random-ass-profiles ''><color:#FEFEFE>/auth dev create-random-ass-profiles

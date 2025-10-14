@@ -108,6 +108,8 @@ servers:
   require-link:
     list:
     - 'super-duper-secure-server'
+    # Разрешённые для допуска методы привязки, например, ['vk', 'telegram']. Пустой список = разрешены все.
+    allowed-link-methods: []
     message: |-
       <red>Вы должны иметь привязку, чтобы войти на этот сервер.
 

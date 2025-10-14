@@ -24,11 +24,8 @@ default-player-parameters:
 # │ Продвинутые настройки базы данных. Не трогайте без причины!
 # └────────────────────────────────
 database:
+  max-threads: -1
   connection-args: []
-  cache:
-    enabled: true
-    size: 10000
-    expire-after: '30 мин'
 
 # Устанавливать ли игрокам UUID из БД. Не трогайте без причины!
 force-set-player-uuid: false

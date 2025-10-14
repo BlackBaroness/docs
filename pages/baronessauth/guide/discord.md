@@ -38,6 +38,6 @@ bot:
 
 ### 7. Введите `/auth reload` - бот должен сразу начать работать
 
-Для лучшей интеграции с вашим Discord сервером есть такие функции как `require-server-membership`, `link-using-channel`, `set-name-after-link` и `set-role-after-link`.
+Для лучшей интеграции с вашим Discord сервером есть такие функции как `require-server-membership`, `link-using-channel`, `set-name-after-link`, `set-role-after-link`, `remove-role-after-link`...
 
 Эти функции не требуют инструкции, в конфиге уже итак всё сказано. Просто включите режим разработчика в клиенте Discord, скопируйте нужные ID и вставьте, куда вам надо.

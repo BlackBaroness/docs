@@ -23,6 +23,7 @@ messages:
   invalid-number: '<red>''<input>'' это не число.'
   temporary-code-rate-limit: '<red>Подождите, прежде чем запрашивать новый временный
     код!'
+  previous-command-execution-still-active: '<red>Прошлый вызов команды ещё активен!'
   slow-operation: '<yellow>Это может занять некоторое время...'
   invalid-usage-header: '<red>[<cause>: <input>]</red> <gray>Использование:</gray>'
   invalid-usage-entry: '<gray><schematic>'

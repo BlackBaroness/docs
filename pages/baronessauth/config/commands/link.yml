@@ -5,7 +5,7 @@
 # └────────────────────────────────
 aliases:
 - 'link'
-cooldown: '1 сек 200 мсек'
+cooldown: '700 мсек'
 permissions: []
 arguments:
   service: 'сервис'

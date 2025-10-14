@@ -188,7 +188,7 @@ BaronessAuth.
 ```yml
       forwarding: !<bungee-guard>
         tokens:
-          - 'токен BungeeGuard'
+        - 'токен BungeeGuard'
 ```
 
 4. Modern / Velocity:
