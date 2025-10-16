@@ -256,6 +256,39 @@ backup-load:
     <gradient:#FFE082:#FFB74D>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</gradient>
 
 # ┌────────────────────────────────
+# │ Команда /baronessauth migrate [плагин].
+# │ Право: BaronessAuth.command.auth.migrate
+# │ Копирует данные из другого плагина, создавая бекап.
+# │ Действие не мгновенное - вам будет показан прогресс по мере создания.
+# │ По завершению у вас будет бекап, который можно будет загрузить обычными методами (читайте выше).
+# └────────────────────────────────
+migrate:
+  help: '<gradient:#FFE082:#FFB74D>┣</gradient> <hover:show_text:''Кликабельно: /auth
+    migrate <источник>''><click:suggest_command:''/auth migrate ''><color:#FEFEFE>/auth
+    migrate <gray><источник></gray></color></click></hover>'
+  unknown-migration: '<red>Неизвестный источник миграции ''<input>''. Доступны: <sources>.'
+  expected-fail: '<red>Миграция не удалась: <message>.'
+  unexpected-fail: '<red>Миграция не удалась. Проверьте логи, чтобы узнать подробнее.'
+  progress: |-
+    <gradient:#FFE082:#FFB74D>┏━━━━━━━━ Импорт из <source>       ━━━━━━━━┓</gradient>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13>Файл:</color> <color:#FEFEFE><file></color>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13>Профилей сохранено:</color> <color:#FEFEFE><saved></color>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13>Профилей пропущено:</color> <color:#FEFEFE><skipped></color>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13>Профилей всего:</color> <color:#FEFEFE><total></color>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13>Прогресс:</color> <color:#FEFEFE><percent>%</color> <gray>(осталось около <eta> сек)</gray>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <progress>
+    <gradient:#FFE082:#FFB74D>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</gradient>
+  success: |-
+    <gradient:#FFE082:#FFB74D>┏━━━━ ✔ Создан бекап из данных <source> ━━━━┓</gradient>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13>Профилей сохранено:</color> <color:#FEFEFE><saved></color>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13>Профилей пропущено:</color> <color:#FEFEFE><skipped></color>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13>Профилей всего:</color> <color:#FEFEFE><total></color>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13>Перенос занял <color:#FEFEFE><time_spent></color>.</color>
+
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13>Напишите </color><color:#FEFEFE>/auth backup load <file></color><color:#EBCF13>, чтобы применить этот бекап.</color>
+    <gradient:#FFE082:#FFB74D>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</gradient>
+
+# ┌────────────────────────────────
 # │ Группа команд /baronessauth dev.
 # │ Право ко всем ним: BaronessAuth.command.auth.dev
 # │

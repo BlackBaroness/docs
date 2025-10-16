@@ -61,6 +61,12 @@ export default defineConfig({
                 { text: 'Бот VK', link: '/pages/baronessauth/guide/vk' },
                 { text: 'Бот Telegram', link: '/pages/baronessauth/guide/telegram' },
                 { text: 'Бот Discord', link: '/pages/baronessauth/guide/discord' },
+                {
+                  text: 'Миграции',
+                  items: [
+                    { text: 'nLogin', link: '/pages/baronessauth/guide/migration/nlogin' },
+                  ]
+                },
               ]
             }
           ]
