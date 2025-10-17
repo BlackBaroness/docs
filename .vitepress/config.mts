@@ -67,6 +67,7 @@ export default defineConfig({
                     { text: 'nLogin', link: '/pages/baronessauth/guide/migration/nlogin' },
                   ]
                 },
+                { text: 'API', link: '/pages/baronessauth/guide/api' },
               ]
             }
           ]
