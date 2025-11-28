@@ -11,15 +11,12 @@ messages:
   cooldown: '<red>Подождите <duration>, прежде чем использовать эту команду.'
   unknown-backup-file: '<red>Бекап-файла ''<input>'' не существует.'
   invalid-backup-file: '<red>Бекап-файл ''<input>'' некорректный.'
-  unknown-link-service: '<red>Неизвестный сервис ''<input>''. Введите <gray>/link</gray>,
-    чтобы посмотреть доступные.'
   unknown-migration-source: '<red>Источника миграции ''<input>'' не существует. Доступны:
     <gray><variants></gray>.'
   target-player-must-be-offline: '<red>Указанный игрок, <target>, должен быть оффлайн.'
   target-player-is-not-registered: '<red>Указанный игрок, <target>, не зарегистрирован.'
   process-may-take-a-while: '<gray>Этот процесс может занять некоторое время....'
   invalid-ip-address: '<red>Некорректный IP-адрес: <input>'
-  already-linked: '<red>Вы уже привязаны к сервису <service>!'
   invalid-number: '<red>''<input>'' это не число.'
   temporary-code-rate-limit: '<red>Подождите, прежде чем запрашивать новый временный
     код!'

@@ -15,3 +15,5 @@ messages:
     <yellow>Доступные сервисы: <white><services></white></yellow>
     <yellow>Введите <white>/link [сервис]</white> для привязки.</yellow>
   unknown-code: '<red>Неизвестный код. Может, вы хотели отправить его боту, а не сюда?'
+  unknown-service: '<red>Неизвестный сервис ''<input>''. Доступны: <white><services></white>.'
+  already-linked: '<red>Вы уже привязаны к сервису <service>!'
