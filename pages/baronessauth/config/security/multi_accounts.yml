@@ -37,7 +37,7 @@ notify:
   on-disconnect:
     enabled: false
     permission: 'BaronessAuth.notify.multiaccounts.disconnect'
-    message: '<yellow>⚠ Отклонён мультаккаунт: <name>! Остальные аккаунты: <accounts>.'
+    message: '<yellow>⚠ Отклонён мультиаккаунт: <name>! Остальные аккаунты: <accounts>.'
 
   # Оповещение, когда мультиаккаунт был зарегистрирован.
   on-register:

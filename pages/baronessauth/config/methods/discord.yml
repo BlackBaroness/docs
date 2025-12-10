@@ -91,6 +91,14 @@ bot:
     # Максимальная длительность всего HTTP запроса - от отправки до получения ответа.
     request: '10 сек'
 
+  # Прокси для подключения к Discord.
+  # Обязательно к прочтению: https://blackbaroness.github.io/docs/pages/baronessauth/guide/proxy.html
+  proxy:
+    enabled: false
+    protocol: !<http>
+      url: 'http://example.com:8080'
+    extra-headers: {}
+
   # ┌────────────────────────────────
   # │ Тут находятся все сообщения бота.
   # └────────────────────────────────
