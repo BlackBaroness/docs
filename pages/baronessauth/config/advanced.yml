@@ -91,6 +91,17 @@ geo-lite:
     maximum-size: 5000
     expire-after-access: '10 мин'
 
+# Определяет формат, в котором игроки видят длительности. Например, "5 мин, 9 сек".
+# Поддерживаются: SHORT_ENGLISH, MEDIUM_ENGLISH, FULL_WORD_ENGLISH, SHORT_RUSSIAN, MEDIUM_RUSSIAN
+# Подробнее: https://github.com/BlackBaroness/duration-serializer-java/#available-formats
+duration-format: 'MEDIUM_RUSSIAN'
+
+# Как бы этак это... Фуууух... Это сложно объяснить...
+# Вам вряд ли это понадобится, в общем.
+smart-list-separators:
+  normal: ', '
+  last: ' и '
+
 # Включает подробные логи (нужно только разработчикам).
 debug: false
 
