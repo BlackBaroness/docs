@@ -15,6 +15,7 @@ messages:
     <gray><variants></gray>.'
   target-player-must-be-offline: '<red>Указанный игрок, <target>, должен быть оффлайн.'
   target-player-is-not-registered: '<red>Указанный игрок, <target>, не зарегистрирован.'
+  target-player-is-already-registered: '<red>Указанный игрок, <target>, уже зарегистрирован.'
   process-may-take-a-while: '<gray>Этот процесс может занять некоторое время....'
   invalid-ip-address: '<red>Некорректный IP-адрес: <input>'
   invalid-number: '<red>''<input>'' это не число.'

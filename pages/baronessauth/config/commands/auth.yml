@@ -20,8 +20,8 @@ reload:
   success: |-
     <gradient:#FFE082:#FFB74D>┏━━━━━━━━━━━━━━ Перезагрузка ━━━━━━━━━━━━━━┓</gradient>
     <gradient:#FFE082:#FFB74D>┣</gradient> <color:#36FC26>Плагин успешно перезагружен.</color>
-    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13>Некоторые глобальные настройки (например, базу данных) можно сменить только через полную перезагрузку!</color>
-    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13>Обычно комментарий над такими настройками сообщает об этом.</color>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#FEFEFE>Некоторые глобальные настройки (например, базу данных) можно сменить только через полную перезагрузку!</color>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#FEFEFE>Обычно комментарий над такими настройками сообщает об этом.</color>
     <gradient:#FFE082:#FFB74D>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</gradient>
 
 # ┌────────────────────────────────
@@ -45,6 +45,22 @@ player-info:
     <gradient:#FFE082:#FFB74D>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</gradient>
   premium-yes: '<color:#36FC26>да</color>'
   premium-no: '<red>нет'
+
+# ┌────────────────────────────────
+# │ Команда /baronessauth player [игрок] register.
+# │ Право: BaronessAuth.command.auth.player.register
+# │ Регистрирует игрока (по умолчанию у него нет ни пароля, ни привязок - войти не сможет).
+# └────────────────────────────────
+player-register:
+  help: '<gradient:#FFE082:#FFB74D>┣</gradient> <hover:show_text:''Кликабельно: /auth
+    player <игрок> register''><click:suggest_command:''/auth player ''><color:#FEFEFE>/auth
+    player <gray><игрок></gray> register</color></click></hover>'
+  success: |-
+    <gradient:#FFE082:#FFB74D>┏━━━━━━━━━━ Игрок зарегистрирован ━━━━━━━━━━┓</gradient>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#FEFEFE>Вы зарегистрировали</color> <color:#EBCF13><target></color><color:#FEFEFE>.</color>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#FEFEFE>У него сейчас нет ни пароля, ни привязки - вход невозможен.</color>
+    <gradient:#FFE082:#FFB74D>┣</gradient> <color:#FEFEFE>Исправьте это:</color> <hover:show_text:'<green>Да-да, тут кликабельно.</green>'><click:suggest_command:'/auth player <target> set '><color:#EBCF13><u>/auth player <target> set [...]</u></color></click></hover><color:#FEFEFE>.</color>
+    <gradient:#FFE082:#FFB74D>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</gradient>
 
 # ┌────────────────────────────────
 # │ Команда /baronessauth player [игрок] set password [пароль].
