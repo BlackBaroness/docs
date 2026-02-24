@@ -36,7 +36,7 @@
 
 ## Типы серверов / `picolimbo`
 
-Основанный на [PicoLimbo](github.com/Quozul/PicoLimbo), этот сервер крайне лёгкий и быстрый.
+Основанный на [PicoLimbo](https://github.com/Quozul/PicoLimbo), этот сервер крайне лёгкий и быстрый.
 
 #### ✅ Плюсы
 
