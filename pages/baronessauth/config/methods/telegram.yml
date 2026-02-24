@@ -168,48 +168,88 @@ bot:
     - - 'HELP'
 
     # Здесь можно расположить кнопки:
-    #   TOGGLE_2FA
-    #   TOGGLE_NOTIFICATIONS
-    #   TOGGLE_SESSIONS
+    #   ENABLE_2FA
+    #   DISABLE_2FA
+    #   ENABLE_NOTIFICATIONS
+    #   DISABLE_NOTIFICATIONS
+    #   ENABLE_SESSIONS
+    #   DISABLE_SESSIONS
     #   CLOSE_SETTINGS
     settings-keyboard-layout:
-    - - 'TOGGLE_2FA'
-    - - 'TOGGLE_NOTIFICATIONS'
-    - - 'TOGGLE_SESSIONS'
+    - - 'ENABLE_2FA'
+      - 'DISABLE_2FA'
+    - - 'ENABLE_NOTIFICATIONS'
+      - 'DISABLE_NOTIFICATIONS'
+    - - 'ENABLE_SESSIONS'
+      - 'DISABLE_SESSIONS'
     - - 'CLOSE_SETTINGS'
 
     2fa-request:
       accept: '✅ Разрешить'
       decline: '❌ Отклонить'
+
     status:
       label: '📑 Статус'
       output: |-
-        👤 Ник: <name>
-        📶 Онлайн: <online>
-        📅 Последний логин: <last_login_date>
-        🌐 Последний IP: <last_ip> (<last_ip_city>, <last_ip_country>)
-        🔔 Уведомления: <notifications>
-        🔐 2FA: <2fa>
-        💻 Сессии: <sessions>
-        🚫 Статус блокировки: <block>
-      online: 'да 🟢'
-      offline: 'нет 🔴'
+        👤 Аккаунт: <name> — <online>
+
+        📅 Последний вход: <last_login_date>
+        🌍 Последний IP: <last_ip> (<last_ip_city>, <last_ip_country>)
+
+        <notifications>
+
+        <2fa>
+
+        <sessions>
+
+        <block>
+      online:
+        yes: 'Онлайн 🟢'
+        no: 'Оффлайн 🔴'
+      notifications:
+        yes: |-
+          🔔 Уведомления: ✅ Включены
+          Вы получите сообщение при успешном входе
+        no: |-
+          🔔 Уведомления: ❌ Выключены
+          Бот не сообщает о входах
+      2fa:
+        yes: |-
+          🔐 2FA: ✅ Включена
+          Для входа нужно подтверждение
+        no: |-
+          🔐 2FA: ❌ Выключена
+          Подтверждение для входа не требуется
+      sessions:
+        yes: |-
+          💻 Cессии: ✅ Включены
+          Мгновенный вход с того же IP
+        no: |-
+          💻 Cессии: ❌ Выключены
+          Всегда нужна аутентификация
+      block:
+        yes: '🚫 Ручная блокировка: установлена'
+        no: '🚫 Ручная блокировка: нет'
+
     reset-password:
       label: '🔐 Сброс пароля'
       in-progress: '🔐 Генерируем пароль для <name>... ⏳'
-      success: '🔐 Новый пароль для <name>: `<password>`'
+      success: '🔐 Новый пароль для <name>: <password>'
+
     settings:
       label: '⚙ Настройки'
       open: '⚙ Вы открыли меню настроек.'
       close: '⚙ Вы закрыли меню настроек.'
+
     toggle-block:
       label: '⛔ Блокировка'
       success: |-
         ️️️⛔️ Вы переключили блокировку <name>, теперь она <status>.
 
         Заблокированный аккаунт не сможет входить на сервер, пока вы его не разблокируете.
-      status-enabled: 'включена (вход запрещён)'
-      status-disabled: 'выключена (вход разрешён)'
+      enabled: 'включена (вход запрещён)'
+      disabled: 'выключена (вход разрешён)'
+
     unlink:
       label: '⭕ Отвязка'
       confirmation-description: '⚠ Это действие необратимо!'
@@ -217,31 +257,58 @@ bot:
       confirmation-no: '🟢 Нет, не хочу.'
       success: '⭕ Вы отвязали <name> от этого аккаунта.'
       cancel: 'Вы решили не отвязывать <name> от этого аккаунта.'
+
     kick:
       label: '💢 Кикнуть'
       success: '💢 Вы кикнули <name>.'
       target-offline: '❌ На сервере сейчас нет <name>.'
       kick-reason: '<red>Владелец аккаунта кикнул вас из бота привязки.'
+
     help:
       label: '📞 Помощь'
       message: 'Нажмите, чтобы обратиться за помощью:'
       url-button: '📞 Обратиться за помощью'
       url: 'https://blackbaroness.github.io/docs/pages/baronessauth/default_help_link'
-    toggle2fa:
-      label: '🔗 Переключить 2FA'
-      success: '🔗 Вы переключили 2FA для <name>, теперь она <status>.'
-      status-enabled: 'включена 🟢'
-      status-disabled: 'выключена 🔴'
-    toggle-notifications:
-      label: '🔔 Переключить уведомления'
-      success: '🔔 Вы переключили уведомления для <name>, теперь они <status>.'
-      status-enabled: 'включены 🟢'
-      status-disabled: 'выключены 🔴'
-    toggle-sessions:
-      label: '⏱ Переключить сессии'
-      success: '⏱ Вы переключили сессии для <name>, теперь они <status>.'
-      status-enabled: 'включены 🟢'
-      status-disabled: 'выключены 🔴'
+
+    enable-2fa:
+      label: '✅ ВКЛ 2FA'
+      success: |-
+        ✔ Вы включили 2FA для <name>.
+
+        Теперь, при попытке входа на ваш аккаунт, этот бот будет требовать подтверждение.
+    disable-2fa:
+      label: '❌ ВЫКЛ 2FA'
+      success: |-
+        ⭕ Вы выключили 2FA для <name>.
+
+        Теперь этот бот не будет требовать никаких подтверждений при попытке входа на ваш аккаунт.
+
+    enable-notifications:
+      label: '✅ ВКЛ уведомления'
+      success: |-
+        ✔ Вы включили уведомления для <name>.
+
+        Теперь бот будет уведомлять вас, когда на ваш аккаунт успешно вошли.
+    disable-notifications:
+      label: '❌ ВЫКЛ уведомления'
+      success: |-
+        ⭕ Вы выключили уведомления для <name>.
+
+        Теперь бот не будет уведомлять вас, когда на ваш аккаунт успешно вошли.
+
+    enable-sessions:
+      label: '✅ ВКЛ сессии'
+      success: |-
+        ✔ Вы включили сессии для <name>.
+
+        Теперь вы можете мгновенно входить на сервер, если недавно уже входили с того же IP адреса.
+    disable-sessions:
+      label: '❌ ВЫКЛ сессии'
+      success: |-
+        ⭕ Вы выключили сессии для <name>.
+
+        Теперь ваш вход всегда будет требовать аутентификации, даже если вы входите с того же IP адреса.
+
     close-settings:
       label: '🚪 Закрыть'
 

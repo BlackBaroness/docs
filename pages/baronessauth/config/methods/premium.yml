@@ -52,6 +52,7 @@ enabling:
     <color:#ff8d0a>╠</color>
     <color:#ff8d0a>╠</color>  Нажмите <color:#ff8d0a><click:run_command:'<callback>'>СЮДА</click></color>, чтобы продолжить.
     <color:#ff8d0a>╚</color>
+
   start: |-
     <color:#ff8d0a>╔</color>
     <color:#ff8d0a>╠</color>        <u>Переключение в режим <b><color:#ff8d0a>ЛИЦЕНЗИИ</color></b></u>
@@ -63,6 +64,7 @@ enabling:
     <color:#ff8d0a>╠</color> но после начнёт впускать - процесс будет отменён.
     <color:#ff8d0a>╠</color>
     <color:#ff8d0a>╚</color>
+
   success: |-
     <color:#ff8d0a>╔</color>
     <color:#ff8d0a>╠</color> <b>Вы переключились в режим <color:#ff8d0a>ЛИЦЕНЗИИ</color>!
@@ -82,6 +84,7 @@ disabling:
     <color:#ff8d0a>╠</color>
     <color:#ff8d0a>╠</color>  Нажмите <color:#ff8d0a><click:run_command:'<callback>'>СЮДА</click></color>, чтобы продолжить.
     <color:#ff8d0a>╚</color>
+
   success: |-
     <color:#ff8d0a>╔</color>
     <color:#ff8d0a>╠</color> <b>Вы переключились в режим <color:#ff8d0a>ПИРАТА</color>!
@@ -101,3 +104,9 @@ login:
     duration-fade-in: '500 мсек'
     duration-stay: '3 сек 500 мсек'
     duration-fade-out: '1 сек'
+# Требовать ли, чтобы у игрока была по крайней мере одна привязка?
+# Это может быть полезно, если игроки активируют /premium на арендованных аккаунтах.
+require-link:
+  enabled: false
+  message: '<red>Вы должны сначала привязаться к любому сервису. Введите /link, чтобы
+    посмотреть доступные.'
