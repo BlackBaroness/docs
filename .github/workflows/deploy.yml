@@ -29,10 +29,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v6
         with:
-          node-version: 25
-
-      - name: Enable Corepack
-        run: corepack enable
+          node-version: 24
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
