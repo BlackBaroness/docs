@@ -161,3 +161,4 @@ general-logs:
     print-to-file: true
     print-to-console: true
     compression-threshold: '50 MiB'
+

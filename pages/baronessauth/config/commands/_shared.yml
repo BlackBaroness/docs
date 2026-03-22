@@ -74,3 +74,4 @@ progress-bar:
   segment-count: 36
   segment-filled: '<color:#00ff0d>■'
   segment-empty: '<color:#a6a6a6>□'
+

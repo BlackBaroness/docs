@@ -330,3 +330,8 @@ unsafe-developer-commands:
     /auth dev create-random-ass-logins <количество> <игрок>''><click:suggest_command:''/auth
     dev create-random-ass-logins ''><color:#FEFEFE>/auth dev create-random-ass-logins
     <gray><количество></gray> <gray><игрок></gray></color></click></hover>'
+  help-fix-limbo-auth-sha256-passwords-falsely-recognized-as-bcrypt: '<gradient:#FFE082:#FFB74D>┣</gradient>
+    <hover:show_text:''Кликабельно: /auth dev fix-limboauth-sha256-passwords-falsely-recognized-as-bcrypt''><click:suggest_command:''/auth
+    dev fix-limboauth-sha256-passwords-falsely-recognized-as-bcrypt''><color:#FEFEFE>/auth
+    dev fix-limboauth-sha256-passwords-falsely-recognized-as-bcrypt</color></click></hover>'
+

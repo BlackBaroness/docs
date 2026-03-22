@@ -12,3 +12,4 @@ arguments:
   password: 'ваш пароль'
 messages:
   success: '<green>Ваша регистрация удалена.'
+

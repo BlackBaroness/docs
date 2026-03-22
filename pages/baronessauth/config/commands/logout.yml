@@ -11,3 +11,4 @@ cooldown: '10 сек'
 permissions: []
 messages:
   success: '<green>Ваша сессия сброшена.'
+
