@@ -82,11 +82,29 @@ servers:
       # Если указан порт 0, плагин автоматически выберет свободный - менять необязательно.
       port: 0
       # Вид мира (overworld, nether, end).
-      dimension: 'end'
+      dimension: 'overworld'
+      # Вы можете установить свою схематику - прочтите гайд выше, чтобы узнать, как.
+      # Оставьте пустым, чтобы отключить схематику.
+      # Игроки, заходящие с клиентов ниже 1.17, не увидят блоков.
+      schematic: 'default-auth'
+      # В отличие от серверов типа Paper, PicoLimbo не устанавливает схематику ровно на 0,0.
+      # Вам нужно, указав свою схематику, зайти и найти нужную точку, а после самостоятельно указать
+      location:
+        x: 64.5
+        y: 37.0
+        z: 72.5
+        yaw: 180.0
+        pitch: 0.0
       # Режим игрока (survival, creative, adventure, spectator).
-      game-mode: 'spectator'
-      # Время в мире.
-      time: 0
+      game-mode: 'adventure'
+      # Разрешать ли полёт через двойное нажатие пробела?
+      allow-flight: false
+      # Уменьшить ли информацию в F3? Это скрывает координаты.
+      reduced-debug-info: true
+      # Дальность прорисовки - должно совпадать с вашей схематикой! Меньше = лучше.
+      view-distance: 2
+      # Время в мире: https://minecraft.wiki/w/Daylight_cycle
+      time: 23000
       # Настройки Forwarding - обычно нужно менять только при использовании Velocity Forwarding
       # https://blackbaroness.github.io/docs/pages/baronessauth/guide/embedded-servers.html#%D0%BF%D0%BE%D0%BB%D0%BD%D1%8B%D0%B8
       forwarding: !<none> {}

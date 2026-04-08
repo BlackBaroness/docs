@@ -27,6 +27,7 @@ database:
   max-threads: -1
   connection-args: []
   enable-mariadb-recognition: true
+  max-connection-lifetime: '15 мин'
 
 # Устанавливать ли игрокам UUID из БД. Не трогайте без причины!
 force-set-player-uuid: false

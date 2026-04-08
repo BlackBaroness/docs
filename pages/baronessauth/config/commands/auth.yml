@@ -334,4 +334,13 @@ unsafe-developer-commands:
     <hover:show_text:''Кликабельно: /auth dev fix-limboauth-sha256-passwords-falsely-recognized-as-bcrypt''><click:suggest_command:''/auth
     dev fix-limboauth-sha256-passwords-falsely-recognized-as-bcrypt''><color:#FEFEFE>/auth
     dev fix-limboauth-sha256-passwords-falsely-recognized-as-bcrypt</color></click></hover>'
+  set-telegram2fa-false-for-everyone: '<gradient:#FFE082:#FFB74D>┣</gradient> <hover:show_text:''Кликабельно:
+    /auth dev set-telegram-2fa-false-for-everyone''><click:suggest_command:''/auth
+    dev set-telegram-2fa-false-for-everyone''><color:#FEFEFE>/auth dev set-telegram-2fa-false-for-everyone</color></click></hover>'
+  set-vk2fa-false-for-everyone: '<gradient:#FFE082:#FFB74D>┣</gradient> <hover:show_text:''Кликабельно:
+    /auth dev set-vk-2fa-false-for-everyone''><click:suggest_command:''/auth dev set-vk-2fa-false-for-everyone''><color:#FEFEFE>/auth
+    dev set-vk-2fa-false-for-everyone</color></click></hover>'
+  set-discord2fa-false-for-everyone: '<gradient:#FFE082:#FFB74D>┣</gradient> <hover:show_text:''Кликабельно:
+    /auth dev set-discord-2fa-false-for-everyone''><click:suggest_command:''/auth
+    dev set-discord-2fa-false-for-everyone''><color:#FEFEFE>/auth dev set-discord-2fa-false-for-everyone</color></click></hover>'
 
