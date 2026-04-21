@@ -11,6 +11,7 @@ messages:
   cooldown: '<red>Подождите <duration>, прежде чем использовать эту команду.'
   unknown-backup-file: '<red>Бекап-файла ''<input>'' не существует.'
   invalid-backup-file: '<red>Бекап-файл ''<input>'' некорректный.'
+  specify-backup-file: 'имя бекап-файла (с расширением) в папке backups'
   unknown-migration-source: '<red>Источника миграции ''<input>'' не существует. Доступны:
     <gray><variants></gray>.'
   target-player-must-be-offline: '<red>Указанный игрок, <target>, должен быть оффлайн.'

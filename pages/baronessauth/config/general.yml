@@ -102,7 +102,7 @@ servers:
       # Уменьшить ли информацию в F3? Это скрывает координаты.
       reduced-debug-info: true
       # Дальность прорисовки - должно совпадать с вашей схематикой! Меньше = лучше.
-      view-distance: 2
+      view-distance: 4
       # Время в мире: https://minecraft.wiki/w/Daylight_cycle
       time: 23000
       # Настройки Forwarding - обычно нужно менять только при использовании Velocity Forwarding
