@@ -45,7 +45,7 @@ export default defineConfig({
                   text: 'commands/',
                   items: [
                     { text: '_shared.yml', link: '/pages/baronessauth/config/commands/_shared' },
-                    { text: 'baronessauth.yml', link: '/pages/baronessauth/config/commands/baronessauth' },
+                    { text: 'auth.yml', link: '/pages/baronessauth/config/commands/auth' },
                     { text: 'changepassword.yml', link: '/pages/baronessauth/config/commands/changepassword' },
                     { text: 'link.yml', link: '/pages/baronessauth/config/commands/link' },
                     { text: 'logout.yml', link: '/pages/baronessauth/config/commands/logout' },
