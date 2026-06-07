@@ -6,9 +6,9 @@
 
 ## Добавление в проект
 
-Добавьте мой репозиторий: [ссылка на инструкцию](https://blackbaroness.inpoint.pro/maven/#/)
+Добавьте мой репозиторий: [ссылка на инструкцию](https://maven.blackbaroness.inpoint.pro/#/rei-releases)
 
-Добавьте мой артефакт: [ссылка на инструкцию](https://blackbaroness.inpoint.pro/maven/#/rei-releases/io/github/blackbaroness/baronessauth-bungeecord-api)
+Добавьте мой артефакт: [ссылка на инструкцию](https://maven.blackbaroness.inpoint.pro/#/rei-releases/io/github/blackbaroness/baronessauth-bungeecord-api)
 
 Помните - артефакт должен подключаться как `compileOnly` / `<scope>provided</scope>`!
 

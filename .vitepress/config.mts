@@ -66,6 +66,7 @@ export default defineConfig({
                   items: [
                     { text: 'nLogin', link: '/pages/baronessauth/guide/migration/nlogin' },
                     { text: 'JPremium', link: '/pages/baronessauth/guide/migration/jpremium' },
+                    { text: 'LibreLogin', link: '/pages/baronessauth/guide/migration/librelogin' },
                   ]
                 },
                 { text: 'Прокси', link: '/pages/baronessauth/guide/proxy' },
