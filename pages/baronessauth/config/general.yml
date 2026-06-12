@@ -155,7 +155,6 @@ permission-management:
 automatic-backup:
   enabled: true
   interval: '1 ч'
-  compression-level: 8
 
 # ┌────────────────────────────────
 # │ Настройки напоминания о привязке.

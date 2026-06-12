@@ -29,6 +29,11 @@ database:
   enable-mariadb-recognition: true
   max-connection-lifetime: '15 мин'
 
+# Степень сжатия бекапов (/auth backup) от 1 до 9.
+# Чем выше степень, чем медленнее создание бекапа и тем больше ОЗУ тратится в процессе, но это делает файл меньше.
+# Сейчас для сжатия используется алгоритм LZMA2.
+backup-compression-level: 6
+
 # Устанавливать ли игрокам UUID из БД. Не трогайте без причины!
 force-set-player-uuid: false
 
@@ -111,7 +116,7 @@ generic-http-client:
       url: 'http://example.com:8080'
     extra-headers: {}
 
-# Определяет формат, в котором игроки видят длительности. Например, "5 мин, 9 сек".
+# Определяет формат, в котором игроки видят длительности. Например, "5 мин 9 сек".
 # Поддерживаются: SHORT_ENGLISH, MEDIUM_ENGLISH, FULL_WORD_ENGLISH, SHORT_RUSSIAN, MEDIUM_RUSSIAN
 # Подробнее: https://github.com/BlackBaroness/duration-serializer-java/#available-formats
 duration-format: 'MEDIUM_RUSSIAN'
@@ -121,6 +126,18 @@ duration-format: 'MEDIUM_RUSSIAN'
 smart-list-separators:
   normal: ', '
   last: ' и '
+
+# Некоторые методы (session, premium) авторизуют игрока мгновенно, ещё на этапе подключения.
+# Это позволяет игроку войти сразу в lobby, минуя auth.
+# Вы можете добавить задержку, которую игрок проведёт в auth, если вам это нужно.
+# '' = игрок войдёт сразу в lobby, видя message+title сразу там.
+# '5 сек' = игрок войдёт сначала в auth, увидит message+title, ожидая 5 секунд, а после переместится в lobby.
+instant-methods-delay: ''
+
+# Пинговать ли встроенные сервера для проверки их состояния?
+# true = пингует, пытаясь так отловить зависания (BungeeCord не всегда правильно это делает, бывают ложные провальные пинги).
+# false = не пингует, пока процесс сервера жив, он считается живым.
+enable-embedded-server-pinging: true
 
 # Включает подробные логи (нужно только разработчикам).
 debug: false
