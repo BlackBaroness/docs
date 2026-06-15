@@ -163,12 +163,30 @@ find-player-by-ip:
   help: '<gradient:#FFE082:#FFB74D>┣</gradient> <hover:show_text:''Кликабельно: /auth
     find player by ip <адрес>''><click:suggest_command:''/auth find player by ip ''><color:#FEFEFE>/auth
     find player by ip <gray><адрес></gray></color></click></hover>'
-  output-header: '<gradient:#FFE082:#FFB74D>┏━━━━━ Игроки с IP <address> ━━━━━</gradient>'
-  output-entry: '<gradient:#FFE082:#FFB74D>┣</gradient> <u><color:#EBCF13><click:run_command:''/auth
-    player <name> info''><hover:show_text:''Нажмите, чтобы посмотреть информацию об
-    игроке''><name></hover></click></color></u> от <color:#FEFEFE><gray><first_date></gray>
-    до <gray><last_date></gray> (<gray><logins></gray> раз)'
-  output-footer: '<gradient:#FFE082:#FFB74D>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</gradient>'
+  navigation:
+    page-size: 10
+    header: '<gradient:#FFE082:#FFB74D>┏━━━━━ Игроки с IP <address> <gray>(<current_page>/<max_page>)</gray>
+      ━━━━━</gradient>'
+    entry: '<color:#ffa6ac><gradient:#FFE082:#FFB74D>┣</gradient> <color:#EBCF13><click:run_command:''/auth
+      player <name> info''><hover:show_text:''Нажмите, чтобы посмотреть информацию
+      об игроке''><color:#c2ff99><name></color></hover></click></color> • <color:#94c2ff><logins></color>
+      • <color:#FEFEFE><gray><first_date></gray> → <gray><last_date></gray></color></color>'
+    footer: '<gradient:#FFE082:#FFB74D>┗━━━━━ <start> <previous> <next> <end> ━━━━━</gradient>'
+    start:
+      available: '<color:#EBCF13><click:run_command:''/auth find player by ip <address>''>[Начало]</click></color>'
+      unavailable: '<gray>[Начало]</gray>'
+    previous:
+      available: '<color:#36FC26><click:run_command:''/auth find player by ip <address>
+        <previous_page>''>[Назад]</click></color>'
+      unavailable: '<gray>[Назад]</gray>'
+    next:
+      available: '<color:#36FC26><click:run_command:''/auth find player by ip <address>
+        <next_page>''>[Вперёд]</click></color>'
+      unavailable: '<gray>[Вперёд]</gray>'
+    end:
+      available: '<color:#EBCF13><click:run_command:''/auth find player by ip <address>
+        999999999''>[Конец]</click></color>'
+      unavailable: '<gray>[Конец]</gray>'
 
 # ┌────────────────────────────────
 # │ Команда /baronessauth find login by player [игрок] <страница>.
@@ -179,16 +197,15 @@ find-login-by-player:
   help: '<gradient:#FFE082:#FFB74D>┣</gradient> <hover:show_text:''Кликабельно: /auth
     find login by player <игрок>''><click:suggest_command:''/auth find login by player
     ''><color:#FEFEFE>/auth find login by player <gray><игрок></gray></color></click></hover>'
-  page-size: 10
-  output-header: '<gradient:#FFE082:#FFB74D>┏━━━━━ Входы игрока <name> <gray>(<current_page>/<max_page>)</gray>
-    ━━━━━</gradient>'
-  output-entry: '<color:#ffa6ac><gradient:#FFE082:#FFB74D>┣</gradient> <color:#c2ff99><date></color>
-    • <color:#FEFEFE><click:run_command:''/auth find player by ip <address>''><hover:show_text:''Нажмите,
-    чтобы поискать игроков с таким же адресом: <address>''><color:#7afff6><address></color></hover></click></color>
-    • <color:#94c2ff><methods></color></color>'
-  output-footer: '<gradient:#FFE082:#FFB74D>┗━━━━━ <start> <previous> <next> <end>
-    ━━━━━</gradient>'
   navigation:
+    page-size: 10
+    header: '<gradient:#FFE082:#FFB74D>┏━━━━━ Входы игрока <name> <gray>(<current_page>/<max_page>)</gray>
+      ━━━━━</gradient>'
+    entry: '<color:#ffa6ac><gradient:#FFE082:#FFB74D>┣</gradient> <color:#c2ff99><date></color>
+      • <color:#FEFEFE><click:run_command:''/auth find player by ip <address>''><hover:show_text:''Нажмите,
+      чтобы поискать игроков с таким же адресом: <address>''><color:#7afff6><address></color></hover></click></color>
+      • <color:#94c2ff><methods></color></color>'
+    footer: '<gradient:#FFE082:#FFB74D>┗━━━━━ <start> <previous> <next> <end> ━━━━━</gradient>'
     start:
       available: '<color:#EBCF13><click:run_command:''/auth find login by player <name>
         1''>[Начало]</click></color>'
