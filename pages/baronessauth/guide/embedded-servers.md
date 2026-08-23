@@ -19,7 +19,7 @@ BaronessAuth предлагает лучшее из обоих решений: �
 | paper (1.8.8)  |      От  1.8       |       mcedit       |   От 500  МБ    |
 | paper (1.12.2) |      От  1.9       |       mcedit       |   От 500  МБ    |
 | paper (1.16.5) |      От  1.9       |  mcedit, sponge.1  |   От 700  МБ    |
-| paper (latest) |      От  1.9       |        все         |   От 1000 МБ    |
+| paper (latest) |      От  1.9       |        все         |   От 1200 МБ    |
 
 Все сервера, как правило, поддерживают вход с самой последней версии игры.
 
@@ -52,7 +52,7 @@ BaronessAuth предлагает лучшее из обоих решений: �
       reduced-debug-info: true
       view-distance: 2
       time: 23000
-      forwarding: !<none> { }
+      forwarding: !<auto> { }
 ```
 
 ## Типы серверов / `nanolimbo`
@@ -146,6 +146,12 @@ BaronessAuth предлагает лучшее из обоих решений: �
 ```yml
       forwarding: !<velocity-modern>
          secret: 'секрет Velocity Modern'
+```
+
+### 5. Auto
+Плагин постарается выбрать правильный режим, анализируя окружение.
+```yml
+      forwarding: !<auto> { }
 ```
 
 ## Java / поставщик
