@@ -50,7 +50,7 @@ BaronessAuth предлагает лучшее из обоих решений: �
       game-mode: 'adventure'
       allow-flight: false
       reduced-debug-info: true
-      view-distance: 2
+      view-distance: 4
       time: 23000
       forwarding: !<auto> { }
 ```
@@ -68,8 +68,9 @@ BaronessAuth предлагает лучшее из обоих решений: �
       port: 0 # плагин сам подберёт порт
       dimension: 'overworld'
       game-mode: 'creative'
+      forwarding: !<auto> { }
       java:
-        xmx: '150 MiB' # лучше выделить больше
+        xmx: '256 MiB'
 ```
 
 ## Типы серверов / `paper`
@@ -85,8 +86,10 @@ BaronessAuth предлагает лучшее из обоих решений: �
       version: 'ВЕРСИЯ' # одно из: 1.8.8, 1.12.2, 1.16.5, latest
       port: 0 # плагин сам подберёт порт
       schematic: 'default-auth' # ниже написано про установку схематики
+      view-distance: 4 # должно покрывать всю схематику
       time: 12040
       weather: true
+      forwarding: !<auto> { }
       java:
         xmx: '1 GiB' # лучше выделить больше
 ```
@@ -123,7 +126,7 @@ BaronessAuth предлагает лучшее из обоих решений: �
 
 Настройка Forwarding определяет то, как прокси и сервер общаются друг с другом.
 
-Как правило, стандартной настройки, `none`, достаточно. Если у вас всё работает, можно ничего не трогать.
+Как правило, лучше оставить стандартный режим `auto`. Если у вас всё работает, менять его не нужно.
 
 ### 1. Отключено
 ```yml
@@ -149,7 +152,8 @@ BaronessAuth предлагает лучшее из обоих решений: �
 ```
 
 ### 5. Auto
-Плагин постарается выбрать правильный режим, анализируя окружение.
+Плагин постарается выбрать правильный режим, анализируя конфигурацию прокси и установленные плагины.
+Если определить более подходящий вариант не удалось, будет использован Legacy forwarding.
 ```yml
       forwarding: !<auto> { }
 ```
@@ -190,7 +194,7 @@ BaronessAuth предлагает лучшее из обоих решений: �
 ```yml
       java:
         provider: !<custom>
-          path: '/home/admin/jdk-21/bin/java'
+          path: '/home/admin/jdk-25/bin/java'
 ```
 
 ## Java / флаги
@@ -198,13 +202,17 @@ BaronessAuth предлагает лучшее из обоих решений: �
 Вам **НЕ НУЖНО** настраивать флаги самостоятельно: BaronessAuth сам выставляет оптимальные.
 
 Если вы всё-таки хотите это сделать, будут использованы **только ваши флаги**! Не забудьте об EULA!
+Параметр `xmx` в таком случае также не используется: укажите `-Xmx` самостоятельно.
 
 ```yml
       java:
         override-flags:
+          - '-Xmx1G'
           - '-Xms128M'
           - '-XX:+UseG1GC'
-          - '-XX:+UseStringDeduplication'
+          - '-XX:+DisableExplicitGC'
+          - '-XX:+ExitOnOutOfMemoryError'
+          - '-XX:+UseCompactObjectHeaders'
           - '-Dcom.mojang.eula.agree=true'
           - '-DPaper.IgnoreJavaVersion=true'
 ```

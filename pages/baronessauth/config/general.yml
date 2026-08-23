@@ -107,7 +107,7 @@ servers:
       time: 23000
       # Настройки Forwarding - обычно нужно менять только при использовании Velocity Forwarding
       # https://blackbaroness.github.io/docs/pages/baronessauth/guide/embedded-servers.html#%D0%BF%D0%BE%D0%BB%D0%BD%D1%8B%D0%B8
-      forwarding: !<none> {}
+      forwarding: !<auto> {}
 
   # ┌────────────────────────────────
   # │ Сервера, для доступа к которым игрок ОБЯЗАН иметь какую-либо привязку.

@@ -31,6 +31,7 @@ export default defineConfig({
                     { text: 'discord.yml', link: '/pages/baronessauth/config/methods/discord' },
                     { text: 'session.yml', link: '/pages/baronessauth/config/methods/session' },
                     { text: 'premium.yml', link: '/pages/baronessauth/config/methods/premium' },
+                    { text: 'bypass.yml', link: '/pages/baronessauth/config/methods/bypass' },
                   ]
                 },
                 {
@@ -73,7 +74,7 @@ export default defineConfig({
                 { 
                   text: 'API',
                   items: [
-                    { text: 'Основы', link: '/pages/baronessauth/guide/api/index' },
+                    { text: 'Основы', link: '/pages/baronessauth/guide/api' },
                     { text: 'Способ "bypass"', link: '/pages/baronessauth/guide/api/bypass' },
                   ]
                 },

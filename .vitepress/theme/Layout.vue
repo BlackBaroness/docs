@@ -34,4 +34,9 @@ router.onAfterRouteChange = setupMediumZoom;
 .medium-zoom-image--opened {
   z-index: 999;
 }
+
+.changelog-page .vp-doc details > summary {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
 </style>
