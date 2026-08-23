@@ -70,7 +70,13 @@ export default defineConfig({
                   ]
                 },
                 { text: 'Прокси', link: '/pages/baronessauth/guide/proxy' },
-                { text: 'API', link: '/pages/baronessauth/guide/api' },
+                { 
+                  text: 'API',
+                  items: [
+                    { text: 'Основы', link: '/pages/baronessauth/guide/api/index' },
+                    { text: 'Способ "bypass"', link: '/pages/baronessauth/guide/api/bypass' },
+                  ]
+                },
               ]
             }
           ]
