@@ -1,0 +1,20 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+Astro.response.status = 404;
+---
+
+<StarlightPage
+	hasSidebar={false}
+	frontmatter={{
+		title: 'Страница не найдена',
+		description: 'Такой страницы нет или её адрес изменился.',
+		tableOfContents: false,
+		pagefind: false,
+		prev: false,
+		next: false,
+	}}
+>
+	<p>Проверьте адрес или воспользуйтесь поиском по документации.</p>
+	<p><a href="/docs/">Перейти на главную</a></p>
+</StarlightPage>

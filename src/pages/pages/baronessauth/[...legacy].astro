@@ -1,0 +1,38 @@
+---
+import legacyRedirects from '../../../data/legacy-redirects.mjs';
+
+export function getStaticPaths() {
+	return Object.entries(legacyRedirects).map(([legacy, destination]) => ({
+		params: { legacy },
+		props: { destination },
+	}));
+}
+
+const { destination } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ru" data-destination={destination}>
+	<head>
+		<meta charset="utf-8" />
+		<title>Перенаправление…</title>
+		<script is:inline>
+			const destination = document.documentElement.dataset.destination;
+			let hash = window.location.hash;
+			const version = decodeURIComponent(hash.slice(1)).match(
+				/^_(\d+)-(\d+)-(\d+)-(\d+)-(\d+)-(\d+)$/,
+			);
+
+			if (version) {
+				hash = `#${version.slice(1, 4).join('')}-${version.slice(4).join('')}`;
+			}
+
+			window.location.replace(`${destination}${hash}`);
+		</script>
+		<meta http-equiv="refresh" content={`0;url=${destination}`} />
+		<link rel="canonical" href={destination} />
+	</head>
+	<body data-pagefind-ignore>
+		<a href={destination}>Перейти к новой версии документации</a>
+	</body>
+</html>

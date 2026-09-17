@@ -1,0 +1,180 @@
+@import '@fontsource-variable/inter/opsz.css';
+@import '@fontsource-variable/inter/opsz-italic.css';
+@import '@fontsource-variable/jetbrains-mono/wght.css';
+@import '@fontsource-variable/jetbrains-mono/wght-italic.css';
+
+:root {
+	--sl-font: 'Inter Variable';
+	--sl-font-mono: 'JetBrains Mono Variable';
+	color-scheme: dark;
+}
+
+:root[data-theme='dark'] {
+	--sl-color-white: #eeeeee;
+	--sl-color-gray-1: #dedede;
+	--sl-color-gray-2: #c4c4c4;
+	--sl-color-gray-3: #a8a8a8;
+	--sl-color-gray-4: #606060;
+	--sl-color-gray-5: #343434;
+	--sl-color-gray-6: #1b1b1b;
+	--sl-color-black: #0d0d0d;
+	--sl-color-accent-low: #352841;
+	--sl-color-accent: #9058be;
+	--sl-color-accent-high: #c491e2;
+	--sl-color-text: #dddddd;
+	--sl-color-text-accent: var(--sl-color-accent-high);
+	--sl-color-text-invert: var(--sl-color-accent-low);
+	--sl-color-bg: var(--sl-color-black);
+	--sl-color-bg-nav: #131313;
+	--sl-color-bg-sidebar: #131313;
+	--sl-color-bg-inline-code: #352741;
+	--sl-color-bg-accent: var(--sl-color-accent-high);
+	--sl-color-hairline-light: var(--sl-color-gray-5);
+	--sl-color-hairline: #2c2c2c;
+	--sl-color-hairline-shade: var(--sl-color-black);
+	--sl-color-blue-low: #172c3d;
+	--sl-color-green-low: #18382d;
+	--sl-color-orange-low: #3a2a16;
+	--sl-color-purple-low: #2d2138;
+	--sl-color-red-low: #3b2027;
+}
+
+.site-title {
+	font-family: var(--sl-font);
+	font-weight: 900;
+}
+
+/* Config reference pages favor code width over a table of contents. */
+html[data-has-sidebar]:not([data-has-toc]) {
+	--sl-content-width: 80rem;
+}
+
+.sl-markdown-content > :is(ul, ol) {
+	padding-inline-start: 1.25rem;
+}
+
+.sl-markdown-content > :is(ul, ol) > li + li {
+	margin-top: 0.75rem;
+}
+
+.sl-markdown-content > :is(ul, ol) > li > p:only-child {
+	margin-block: 0;
+}
+
+.sl-markdown-content > :is(ul, ol) > li {
+	text-wrap: pretty;
+}
+
+.sl-markdown-content > ul > li::marker {
+	color: var(--sl-color-gray-3);
+}
+
+.sl-markdown-content :not(pre) > code {
+	border-radius: 0.3rem;
+}
+
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) code {
+	margin-inline: 0.05em;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.25em;
+	padding: 0.05em 0.25em;
+	background: color-mix(in srgb, var(--sl-color-bg-inline-code) 55%, var(--sl-color-bg));
+	color: inherit;
+	font-size: 0.82em;
+	font-weight: 600;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+/* Give article pages a little more room without shrinking the main navigation. */
+@media (min-width: 72rem) {
+	html[data-has-sidebar][data-has-toc] {
+		--docs-toc-width: 16.5rem;
+		--sl-content-width: 47rem;
+	}
+
+	/*
+	 * Starlight normally splits spare horizontal space between the article's
+	 * left side and the table of contents' right side. On wide screens this
+	 * pulls both columns towards the middle. Keep the table of contents at the
+	 * right edge and center the readable article in the remaining workspace.
+	 */
+	html[data-has-sidebar][data-has-toc] .right-sidebar-container {
+		--sl-sidebar-width: var(--docs-toc-width);
+
+		flex: 0 0 var(--docs-toc-width);
+		width: var(--docs-toc-width);
+	}
+
+	html[data-has-sidebar][data-has-toc] .main-pane {
+		--sl-content-margin-inline: auto;
+
+		flex: 1 1 auto;
+		width: auto;
+		min-width: 0;
+	}
+}
+
+/* A details element directly inside a list item behaves like an expandable list entry. */
+.sl-markdown-content li > details.more-details {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+.sl-markdown-content li > details.more-details > summary {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	color: inherit;
+	font-weight: inherit;
+}
+
+.sl-markdown-content li > details.more-details > summary::before {
+	display: none;
+}
+
+.sl-markdown-content li > details.more-details > summary::after {
+	content: '\2060 Подробнее';
+	display: inline-flex;
+	align-items: center;
+	min-height: 1.4rem;
+	margin-inline-start: 0.5rem;
+	border: 1px solid var(--sl-color-text-accent);
+	border-radius: 0.35rem;
+	padding: 0 0.4rem;
+	background: transparent;
+	color: var(--sl-color-text-accent);
+	font-size: var(--sl-text-xs);
+	font-weight: 600;
+	line-height: 1;
+	vertical-align: baseline;
+}
+
+.sl-markdown-content li > details.more-details > summary:hover::after {
+	background: var(--sl-color-accent-low);
+}
+
+.sl-markdown-content li > details.more-details > .more-details-content {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0.5rem 0 0;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.5rem;
+	padding: 0.65rem 0.75rem 0.75rem;
+	background: var(--sl-color-gray-6);
+}
+
+.sl-markdown-content li > details.more-details[open] > summary::after {
+	content: '\2060 Скрыть';
+	background: var(--sl-color-text-accent);
+	color: var(--sl-color-text-invert);
+}
+
+.sl-markdown-content li > details.more-details > .more-details-content > ul {
+	padding-inline-start: 1.25rem;
+}
+
+.sl-markdown-content li > details.more-details > .more-details-content > ul > li {
+	list-style-type: disc;
+}

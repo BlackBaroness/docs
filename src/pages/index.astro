@@ -1,0 +1,20 @@
+---
+const destination = '/docs/auth/';
+---
+
+<!doctype html>
+<html lang="ru" data-destination={destination}>
+	<head>
+		<meta charset="utf-8" />
+		<title>Перенаправление…</title>
+		<script is:inline>
+			const destination = document.documentElement.dataset.destination;
+			window.location.replace(destination);
+		</script>
+		<meta http-equiv="refresh" content={`0;url=${destination}`} />
+		<link rel="canonical" href={destination} />
+	</head>
+	<body data-pagefind-ignore>
+		<a href={destination}>Перейти к документации BaronessAuth</a>
+	</body>
+</html>
