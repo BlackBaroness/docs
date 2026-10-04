@@ -9,7 +9,7 @@ API позволяет другим плагинам работать с Barones
 
 ## Добавление в проект
 
-Добавьте [репозиторий BaronessAuth](https://maven.blackbaroness.inpoint.pro/#/rei-releases), затем подключите артефакт [`baronessauth-bungeecord-api`](https://maven.blackbaroness.inpoint.pro/#/rei-releases/io/github/blackbaroness/baronessauth-bungeecord-api).
+Добавьте [репозиторий BaronessAuth](https://maven.blackbaroness.riseiron.ru/#/rei-releases), затем подключите артефакт [`baronessauth-bungeecord-api`](https://maven.blackbaroness.riseiron.ru/#/rei-releases/io/github/blackbaroness/baronessauth-bungeecord-api).
 
 Для Gradle используйте `compileOnly`, для Maven — `<scope>provided</scope>`. Не включайте API в JAR своего плагина: во время работы его предоставляет BaronessAuth.
 
