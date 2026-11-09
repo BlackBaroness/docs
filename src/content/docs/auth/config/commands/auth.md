@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `auth.yml`"
+title: "Стандартный auth.yml"
 tableOfContents: false
 ---
 

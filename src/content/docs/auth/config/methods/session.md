@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `session.yml`"
+title: "Стандартный session.yml"
 tableOfContents: false
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `link.yml`"
+title: "Стандартный link.yml"
 tableOfContents: false
 ---
 

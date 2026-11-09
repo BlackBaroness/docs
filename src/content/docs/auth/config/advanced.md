@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `advanced.yml`"
+title: "Стандартный advanced.yml"
 tableOfContents: false
 ---
 

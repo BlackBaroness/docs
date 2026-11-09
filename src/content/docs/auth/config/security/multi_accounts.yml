@@ -45,3 +45,4 @@ notify:
     permission: 'BaronessAuth.notify.multiaccounts.register'
     message: '<yellow>⚠ Новый мультиаккаунт: <name>! Остальные аккаунты: <accounts>.'
 
+

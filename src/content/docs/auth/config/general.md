@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `general.yml`"
+title: "Стандартный general.yml"
 tableOfContents: false
 ---
 

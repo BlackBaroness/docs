@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `_shared.yml`"
+title: "Стандартный _shared.yml"
 tableOfContents: false
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `security/connection_filters.yml`"
+title: "Стандартный security/connection_filters.yml"
 tableOfContents: false
 ---
 

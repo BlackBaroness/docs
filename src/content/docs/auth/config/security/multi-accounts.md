@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `security/multi_accounts.yml`"
+title: "Стандартный security/multi_accounts.yml"
 tableOfContents: false
 ---
 

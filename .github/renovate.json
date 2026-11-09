@@ -5,4 +5,7 @@
         "group:all",
         ":disableDependencyDashboard"
     ],
+    "ignoreDeps": [
+        "@astrojs/markdown-satteri"
+    ]
 }

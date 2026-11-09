@@ -90,9 +90,11 @@ date-format:
 geo-lite:
   unknown-country: 'неизвестная страна'
   unknown-city: 'неизвестный город'
+  # Изменение требует рестарта BungeeCord.
   locales:
   - 'ru'
   - 'en'
+  # Изменение требует рестарта BungeeCord.
   cache:
     maximum-size: 5000
     expire-after-access: '10 мин'
@@ -158,4 +160,5 @@ debug: false
 
 # Включает ОЧЕНЬ подробные логи (нужно только разработчикам).
 trace: false
+
 

@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `unregister.yml`"
+title: "Стандартный unregister.yml"
 tableOfContents: false
 ---
 

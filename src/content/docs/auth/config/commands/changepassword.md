@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `changepassword.yml`"
+title: "Стандартный changepassword.yml"
 tableOfContents: false
 ---
 

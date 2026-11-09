@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `bypass.yml`"
+title: "Стандартный bypass.yml"
 tableOfContents: false
 ---
 

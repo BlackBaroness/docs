@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `vk.yml`"
+title: "Стандартный vk.yml"
 tableOfContents: false
 ---
 

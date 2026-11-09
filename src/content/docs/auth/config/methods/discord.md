@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `discord.yml`"
+title: "Стандартный discord.yml"
 tableOfContents: false
 ---
 

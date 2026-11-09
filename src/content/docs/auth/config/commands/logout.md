@@ -1,5 +1,5 @@
 ---
-title: "Стандартный `logout.yml`"
+title: "Стандартный logout.yml"
 tableOfContents: false
 ---
 
