@@ -29,7 +29,7 @@ title: "История версий"
 
   [Документация MariaDB SSL со стороны драйвера.](https://mariadb.com/docs/connectors/mariadb-connector-j/using-tls-ssl-with-mariadb-java-connector#one-way-ssl-authentication)
 
-  **Новые версии MariaDB имеют zero configuration SSL, что делало подключение возможным. Страдали только старые версии MariaDB.
+  **Новые версии MariaDB имеют zero configuration SSL, что делало подключение возможным. Страдали только старые версии MariaDB.**
   :::
 - :::more[Обновлены внутренние компоненты.]
 
