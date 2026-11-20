@@ -52,6 +52,7 @@ export default defineConfig({
 						{
 							label: 'Конфиги',
 							items: [
+								{ label: 'Список', slug: 'auth/config' },
 								{ label: 'general.yml', slug: 'auth/config/general' },
 								{ label: 'advanced.yml', slug: 'auth/config/advanced' },
 								{

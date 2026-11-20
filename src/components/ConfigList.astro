@@ -1,0 +1,75 @@
+---
+interface Props {
+	items: { file: string; slug: string; description: string }[];
+}
+
+const { items } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<ul class="config-list" role="list">
+	{items.map(({ file, slug, description }) => (
+		<li>
+			<a href={`${base}/auth/config/${slug}/`}>
+				<span class="config-file">{file}</span>
+				<span class="config-description">{description}</span>
+			</a>
+		</li>
+	))}
+</ul>
+
+<style>
+	.config-list {
+		padding: 0;
+		list-style: none;
+	}
+
+	.config-list > li {
+		margin: 0;
+	}
+
+	.config-list a {
+		display: grid;
+		grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+		align-items: baseline;
+		gap: 0.15rem 1.5rem;
+		border-radius: 0.3rem;
+		padding: 0.6rem 0.75rem;
+		color: var(--sl-color-text);
+		text-decoration: none;
+	}
+
+	.config-list a:hover,
+	.config-list a:focus-visible {
+		background: var(--sl-color-bg-nav);
+	}
+
+	.config-list a:hover .config-file {
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
+	}
+
+	.config-list a:focus-visible {
+		outline: 2px solid var(--sl-color-text-accent);
+		outline-offset: 3px;
+	}
+
+	.config-file {
+		font-family: var(--sl-font-mono);
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-text-accent);
+		overflow-wrap: anywhere;
+	}
+
+	.config-description {
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+		line-height: 1.6;
+	}
+
+	@media (max-width: 40rem) {
+		.config-list a {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+</style>

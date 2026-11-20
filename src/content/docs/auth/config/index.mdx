@@ -1,0 +1,49 @@
+---
+title: Конфиги BaronessAuth
+description: Все стандартные конфиги BaronessAuth.
+tableOfContents: false
+sidebar:
+  label: Список
+---
+
+import ConfigList from '../../../../components/ConfigList.astro';
+
+Здесь можно посмотреть стандартные файлы конфигурации BaronessAuth последней версии.
+
+## Общие настройки
+
+<ConfigList items={[
+  { file: 'general.yml', slug: 'general', description: 'База данных и серверы' },
+  { file: 'advanced.yml', slug: 'advanced', description: 'Дополнительные параметры плагина' },
+]} />
+
+## Способы входа (папка `methods`)
+
+<ConfigList items={[
+  { file: 'password.yml', slug: 'methods/password', description: 'Регистрация и вход по паролю' },
+  { file: 'vk.yml', slug: 'methods/vk', description: 'Бот VK и привязка' },
+  { file: 'telegram.yml', slug: 'methods/telegram', description: 'Бот Telegram и привязка' },
+  { file: 'discord.yml', slug: 'methods/discord', description: 'Бот Discord и привязка' },
+  { file: 'session.yml', slug: 'methods/session', description: 'Автоматический вход по IP-адресу' },
+  { file: 'premium.yml', slug: 'methods/premium', description: 'Вход с лицензией Minecraft' },
+  { file: 'bypass.yml', slug: 'methods/bypass', description: 'Вход через Java API (для ваших самописов)' },
+]} />
+
+## Безопасность (папка `security`)
+
+<ConfigList items={[
+  { file: 'passwords.yml', slug: 'security/passwords', description: 'Проверка паролей, хеширование, защита от перебора' },
+  { file: 'multi_accounts.yml', slug: 'security/multi-accounts', description: 'Управление мультиаккаунтами (твинками)' },
+  { file: 'connection_filters.yml', slug: 'security/connection-filters', description: 'Фильтрация входящих подключений' },
+]} />
+
+## Команды (папка `commands`)
+
+<ConfigList items={[
+  { file: '_shared.yml', slug: 'commands/shared', description: 'Общие настройки команд' },
+  { file: 'auth.yml', slug: 'commands/auth', description: 'Команды для админов' },
+  { file: 'changepassword.yml', slug: 'commands/changepassword', description: 'Смена пароля' },
+  { file: 'link.yml', slug: 'commands/link', description: 'Привязка аккаунта' },
+  { file: 'logout.yml', slug: 'commands/logout', description: 'Сброс сессии' },
+  { file: 'unregister.yml', slug: 'commands/unregister', description: 'Удаление аккаунта' },
+]} />
