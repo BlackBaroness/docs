@@ -83,14 +83,20 @@ api.sendVkMessage(vkUserId, "Сообщение");
 
 Аналогичные методы `sendTelegramMessage` и `sendDiscordMessage` отправляют сообщения через других ботов. Передавайте ID пользователя из соответствующей социальной сети.
 
-## Перехват сообщений ботов
+## Перехват событий в ботах
 
-Существует несколько BungeeCord-событий:
+Для этого существуют разные BungeeCord-события.
+
+При получении ботом текстового сообщения:
 - `AuthTelegramMessageEvent`
 - `AuthVkMessageEvent`
 - `AuthDiscordMessageEvent`
 
-Эти события публикуются каждый раз, когда бот получает текстовое сообщение.
+При нажатии пользователем callback кнопки:
+- `AuthTelegramButtonClickEvent`
+- `AuthVkButtonClickEvent`
+- `AuthDiscordButtonClickEvent`
+
 Установив такому событию `setCalcelled(true)`, вы заставите BaronessAuth его проигнорировать.
 
 События наследуют `AsyncEvent`, что позволяет выполнять долгие асинхронные операции.
