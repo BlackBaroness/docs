@@ -190,7 +190,7 @@ importers:
         version: 0.4.10
       '@astrojs/starlight':
         specifier: ^0.43.1
-        version: 0.43.1(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1))
+        version: 0.43.2(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1))
       '@fontsource-variable/inter':
         specifier: ^5.3.0
         version: 5.3.0
@@ -202,7 +202,7 @@ importers:
         version: 7.4.13(@types/node@26.6.6)(yaml@2.9.1)
       starlight-image-zoom:
         specifier: ^0.16.3
-        version: 0.16.3(@astrojs/starlight@0.43.1(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1)))(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1))
+        version: 0.16.3(@astrojs/starlight@0.43.2(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1)))(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1))
 
 packages:
 
@@ -304,8 +304,8 @@ packages:
   '@astrojs/sitemap@3.7.6':
     resolution: {integrity: sha512-QEKD3ubC0iJxpNzC4KvcKdxSP97U5SjuQ16+VkmUwx1TT+Hq7TIV8QGm/d2pvkN6+3GqGXLRzm7j6lZxHETm3A==}
 
-  '@astrojs/starlight@0.43.1':
-    resolution: {integrity: sha512-GhTK+93UNejoQThnYbEkJAlRJiOtctxOCnFtLcUMSTraT75vzS1E89xdMtKOdKcUDD2wx+taJxsfrA3UBs0QgQ==}
+  '@astrojs/starlight@0.43.2':
+    resolution: {integrity: sha512-ZKNLpDdlExdVD3EugTUtJx4bUPcIBIZwgpm9sR4bDgHOn9u42x5GVgMQPlyPpXdechjadb0URJLQE6oPm0F3vw==}
     peerDependencies:
       '@astrojs/markdown-remark': ^7.3.0
       astro: ^7.2.10
@@ -2055,7 +2055,7 @@ snapshots:
       sitemap: 10.0.0
       zod: 4.6.7
 
-  '@astrojs/starlight@0.43.1(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1))':
+  '@astrojs/starlight@0.43.2(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1))':
     dependencies:
       '@astrojs/markdown-satteri': 0.4.10
       '@astrojs/mdx': 8.1.6(@astrojs/markdown-satteri@0.4.10)(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1))
@@ -3672,9 +3672,9 @@ snapshots:
 
   space-separated-tokens@2.0.2: {}
 
-  starlight-image-zoom@0.16.3(@astrojs/starlight@0.43.1(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1)))(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1)):
+  starlight-image-zoom@0.16.3(@astrojs/starlight@0.43.2(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1)))(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1)):
     dependencies:
-      '@astrojs/starlight': 0.43.1(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1))
+      '@astrojs/starlight': 0.43.2(astro@7.4.13(@types/node@26.6.6)(yaml@2.9.1))
       astro: 7.4.13(@types/node@26.6.6)(yaml@2.9.1)
       mdast-util-mdx-jsx: 3.2.2
       rehype-raw: 7.0.0
